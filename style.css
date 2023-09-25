@@ -74,7 +74,7 @@ body{
 #main{
    grid-area: main;
    justify-self: center;
-   background: rgb(209, 97, 97);
+   /* background: rgb(209, 97, 97); */
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -87,13 +87,15 @@ body{
    font-weight: 400;
    text-decoration: underline;
    cursor: pointer;
-   margin-bottom: 1rem;
+   margin-top: .5rem;
+   margin-bottom: 1.4rem;
 }
 #subTitulo{
    font-family: Anonymous;
    font-size: 1.25rem;
    font-weight: 400;
    text-align: center;
+   margin-bottom: 1rem;
 }
 #galeria{
    /* quadrado: 384x365 // retangulo: 325x734 */
@@ -103,15 +105,11 @@ body{
    "img1 img2 img3"
    "img4 img2 img5";
 }
-#tvMatadouro, #fogueteMatadouro, #porcoTusca, #baseado{
-   width: 250px;
-   height: 250px;
-}
-#quimica{
-   width: 250px;
+#tvMatadouro, #quimica, #fogueteMatadouro, #porcoTusca, #baseado{
+   width: 100%;
    height: 100%;
 }
-#galeria img{
+#galeria .fotoGaleria{
    width: inherit;
    height: inherit;
    object-fit: cover;
@@ -122,22 +120,30 @@ body{
    transition: transform 400ms ease-out;
 }
 #galeria .legendaGaleria{
+   display: flex;
+   justify-content: center;
+   align-items: center;
    position:absolute;
    top: 0;
    width: 100%; height: 100%;
    font-size: 1.2rem;
    box-sizing:border-box;
-   padding-top:1.2rem;
-   padding-left:.8rem;
-   background-color: #F7B111;
+   background-color: rgb(247, 177, 17,.85);
    font-family: Anonymous;
    opacity: 0;
-   
 	transition:opacity 400ms;
 }
 #galeria div:hover .legendaGaleria{
    cursor: pointer;
    opacity:1;
+}
+#galeria .legendaGaleria img{
+   width: 20%;
+   height: 20%;
+}
+#galeria .imgVertical{
+   width: 20%;
+   height: 10% !important;
 }
 #galeria #tvMatadouro{
    grid-area: img1;
