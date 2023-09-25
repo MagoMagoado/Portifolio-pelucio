@@ -2,74 +2,170 @@
     font-family: "ChelaOne";
     src: url("fonts/ChelaOne.ttf");
  }
+@font-face {
+   font-family: "Anonymous";
+   src: url("fonts/AnonymousPro-Regular.ttf");
+}
+@font-face {
+   font-family: "Anonymous-Bold";
+   src: url("fonts/AnonymousPro-Bold.ttf");
+}
 html, body{
-    margin: 0; padding: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(248, 248, 248);
-    font-size: 12pt;
- }
- body{
-    display: grid;
-    grid-template-rows: 10vw auto 30vw;
-    grid-template-areas:
-    "nav"
-    "main"
-    "footer";
- }
- #nav{
-    grid-area: nav;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
- }
- #logo{
-    margin-left: -10px;
-    width: 10%;
- }
- #opcoes{
-    margin: 0; padding: 0;
-    display: flex;
- }
- #opcoes div{
-    font-family: ChelaOne;
-    font-size: 1.7rem;
-    color: #F7B111;
-    -webkit-text-stroke-width: .9px;
-    -webkit-text-stroke-color: #000000d7;
-    font-weight: 500;
-    text-shadow: 1px 1.6px 1.3px rgba(0, 0, 0, 0.4);
- }
- #opcoes div:nth-child(1), #opcoes div:nth-child(2), #opcoes div:nth-child(3){
-    margin-right: 20px;
- }
- #navRedes{
-    display: flex;
- }
- #navRedes img{
-    width: 40px; height: 40px;
- }
- #navRedes :nth-child(1), #navRedes :nth-child(2){
-    margin-right: 10px;
- }
- #main{
-    grid-area: main;
-    background: rgb(209, 97, 97);
- }
- #footer{
-    grid-area: footer;
-    background: rgb(119, 209, 97);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "letsTalk contato";
- }
- #letsTalk{
-    grid-area: letsTalk;
-    background: #797979;
- }
- #contato{
-    grid-area: contato;
-    background: #E4E4E4;
- }
-
+   margin: 0; padding: 0;
+   width: 100%;
+   height: 100%;
+   background: rgb(248, 248, 248);
+   font-size: 12pt;
+}
+body{
+   display: grid;
+   grid-template-rows: 10vw auto 30vw;
+   grid-template-areas:
+   "nav"
+   "main"
+   "footer";
+}
+#nav{
+   grid-area: nav;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+#logo{
+   margin-left: -10px;
+   width: 10%;
+}
+#logo:hover{
+   cursor: help;
+}
+#opcoes{
+   margin: 0; padding: 0;
+   display: flex;
+}
+#opcoes div{
+   font-family: ChelaOne;
+   font-size: 1.7rem;
+   color: #F7B111;
+   -webkit-text-stroke-width: .9px;
+   -webkit-text-stroke-color: #000000d7;
+   font-weight: 500;
+   text-shadow: 1px 1.6px 1.3px rgba(0, 0, 0, 0.4);
+}
+#opcoes div:hover{
+   cursor: pointer;
+}
+#opcoes div:nth-child(1), #opcoes div:nth-child(2), #opcoes div:nth-child(3){
+   margin-right: 20px;
+}
+#navRedes{
+   display: flex;
+}
+#navRedes img{
+   width: 40px; height: 40px;
+}
+#navRedes img:hover{
+   cursor: pointer;
+   background-color: rgb(250, 200, 85);
+}
+#navRedes :nth-child(1), #navRedes :nth-child(2){
+   margin-right: 10px;
+}
+/* ////////////////////////////////////////// */
+#main{
+   grid-area: main;
+   justify-self: center;
+   background: rgb(209, 97, 97);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 85vw;
+   justify-content: center;
+}
+#resenhaECoisaSeria{
+   font-family: ChelaOne;
+   font-size: 2.8rem;
+   font-weight: 400;
+   text-decoration: underline;
+   cursor: pointer;
+   margin-bottom: 1rem;
+}
+#subTitulo{
+   font-family: Anonymous;
+   font-size: 1.25rem;
+   font-weight: 400;
+   text-align: center;
+}
+#galeria{
+   /* quadrado: 384x365 // retangulo: 325x734 */
+   display: grid;
+   gap: .5rem;
+   grid-template-areas: 
+   "img1 img2 img3"
+   "img4 img2 img5";
+}
+#tvMatadouro, #fogueteMatadouro, #porcoTusca, #baseado{
+   width: 250px;
+   height: 250px;
+}
+#quimica{
+   width: 250px;
+   height: 100%;
+}
+#galeria img{
+   width: inherit;
+   height: inherit;
+   object-fit: cover;
+   /* transition: transform 400ms ease-out; */
+}
+#galeria div{
+   position:relative;
+   transition: transform 400ms ease-out;
+}
+#galeria .legendaGaleria{
+   position:absolute;
+   top: 0;
+   width: 100%; height: 100%;
+   font-size: 1.2rem;
+   box-sizing:border-box;
+   padding-top:1.2rem;
+   padding-left:.8rem;
+   background-color: #F7B111;
+   font-family: Anonymous;
+   opacity: 0;
+   
+	transition:opacity 400ms;
+}
+#galeria div:hover .legendaGaleria{
+   cursor: pointer;
+   opacity:1;
+}
+#galeria #tvMatadouro{
+   grid-area: img1;
+}
+#galeria #quimica{
+   grid-area: img2;
+}
+#galeria #fogueteMatadouro{
+   grid-area: img3;
+}
+#galeria #porcoTusca{
+   grid-area: img4;
+}
+#galeria #baseado{
+   grid-area: img5;
+}
+/* ////////////////////////////////////////// */
+#footer{
+   grid-area: footer;
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-areas: "letsTalk contato";
+}
+#letsTalk{
+   grid-area: letsTalk;
+   background: #797979;
+}
+#contato{
+   grid-area: contato;
+   background: #E4E4E4;
+}
