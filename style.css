@@ -44,19 +44,18 @@ body{
 }
 #opcoes div{
    font-family: ChelaOne;
-   /* font-size: 1.7rem; */
-   font-size: 2.8vw;
+   font-size: 1.9rem;
    color: #F7B111;
-   -webkit-text-stroke-width: 0.035em;
+   -webkit-text-stroke-width: 0.05rem;
    -webkit-text-stroke-color: #000000d7;
    font-weight: 100;
-   text-shadow: 0.03em 0.1em 0.06em rgba(0, 0, 0, 0.4);
+   text-shadow: 0.03rem 0.1rem 0.06rem rgba(0, 0, 0, 0.3);
 }
 #opcoes div:hover{
    cursor: pointer;
 }
 #opcoes div:nth-child(1), #opcoes div:nth-child(2), #opcoes div:nth-child(3){
-   margin-right: 1em;
+   margin-right: 1rem;
 }
 #navRedes{
    display: flex;
@@ -69,7 +68,7 @@ body{
    background-color: rgb(250, 200, 85);
 }
 #navRedes :nth-child(1), #navRedes :nth-child(2){
-   margin-right: .9em;
+   margin-right: .9rem;
 }
 /* ////////////////////////////////////////// */
 #main{
@@ -88,14 +87,14 @@ body{
    text-decoration: underline;
    cursor: pointer;
    margin-top: 2.5rem;
-   margin-bottom: 1.4rem;
+   margin-bottom: .5rem;
 }
 #subTitulo{
    font-family: Anonymous;
-   font-size: 1.25rem;
+   font-size: 1.6rem;
    font-weight: 400;
    text-align: center;
-   margin-bottom: 1rem;
+   margin-bottom: 2rem;
 }
 #galeria{
    /* quadrado: 384x365 // retangulo: 325x734 */
@@ -159,6 +158,28 @@ body{
 }
 #galeria #baseado{
    grid-area: img5;
+}
+/* ////////////////////////////////////////// */
+#tituloWho{
+   font-family: ChelaOne;
+   font-size: 4.5rem;
+   color: #F7B111;
+   -webkit-text-stroke-width: 1.7px;
+   -webkit-text-stroke-color: #000000d7;
+   font-weight: 100;
+}
+.topicoWho{
+   display: flex;
+}
+.topicoWho div{
+   font-family: Anonymous;
+   font-size: 1.25rem;
+   font-weight: 400;
+   text-align: justify;
+   display: flex;
+}
+.topicoWho img{
+   width: 45%;
 }
 /* ////////////////////////////////////////// */
 #footer{
