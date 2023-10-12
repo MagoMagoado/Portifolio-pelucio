@@ -160,26 +160,58 @@ body{
    grid-area: img5;
 }
 /* ////////////////////////////////////////// */
+#who{
+   margin-top: 4.5rem;
+   width: 90%;
+}
 #tituloWho{
    font-family: ChelaOne;
    font-size: 4.5rem;
    color: #F7B111;
+   margin-bottom: .8rem;
    -webkit-text-stroke-width: 1.7px;
    -webkit-text-stroke-color: #000000d7;
    font-weight: 100;
 }
 .topicoWho{
    display: flex;
+   background-color: aqua;
+   margin-bottom: 1.3rem;
 }
-.topicoWho div{
+.topicoWho:nth-child(2), .topicoWho:nth-child(3){
+   display: flex;
+   align-items: center;
+}
+.topicoWho .pWho{
    font-family: Anonymous;
-   font-size: 1.25rem;
+   font-size: 1.3rem;
    font-weight: 400;
    text-align: justify;
    display: flex;
 }
-.topicoWho img{
-   width: 45%;
+#firstPWho{
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   margin-left: 3rem;
+   margin-right: 1rem;
+}
+.topicoWho:nth-child(3) .pWho{
+   margin-left: 3rem;
+   margin-right: 1rem;
+}
+.topicoWho:nth-child(2) .pWho{
+   margin-left: 1rem;
+   margin-right: 3rem;
+}
+.topicoWho:nth-child(1) img{
+   width: 33%;
+}
+.topicoWho:nth-child(2) img{
+   width: 40%;
+}
+.topicoWho:nth-child(3) img{
+   width: 40%;
 }
 /* ////////////////////////////////////////// */
 #footer{
